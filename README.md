@@ -2,7 +2,7 @@
 
 This is a frontend app, part of [Example Voting App](https://github.com/dockersamples/example-voting-app.git).  
 
-## Steps to Run
+## Tasks to Run
 
 To build and run this app as a container, following steps need to be performed in a Dockerfile: 
 
@@ -11,3 +11,25 @@ To build and run this app as a container, following steps need to be performed i
   * copy over the source code
   * run `pip install -r requirements.txt` to install dependencies
   * launch the app with `gunicorn app:app -b 0.0.0.0:80` command
+
+## Steps 
+### Step 1: Dockerfile
+A Dockerfile is created with following conetents. 
+```
+  FROM python:2.7-alpine
+  WORKDIR /app
+  COPY . .
+  RUN pip install -r requirements.txt
+  EXPOSE 80
+  CMD gunicorn app:app -b 0.0.0.0:80
+```  
+### Step 2: Build Image
+To execute the application, an image is built from Dockerfile using following command. 
+`docker build -t asadhanif/vote:v1 .` 
+
+![Build Image](./screenshorts/build-image.png)
+
+### Step 3: Run the Container
+Run the container with following command:
+`docker run  -t asadhanif/vote:v1 .` 
+![Run Container](./screenshorts/run-container.png)
