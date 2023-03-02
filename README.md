@@ -33,6 +33,11 @@ To execute the application, an image is built from Dockerfile using following co
 ### Step 3: Run the Container
 Run the container with following command:
 
-`docker run  -t asadhanif/vote:v1 .` 
+`docker run -dp 5000:80 asadhanif/votefend:v1` 
 
 ![Run Container](./screenshorts/run-container.png)
+
+### Running App
+Open the browser and brows `<ip-address>:5000`
+
+![Run App](./screenshorts/running-app.png)
