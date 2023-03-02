@@ -2,7 +2,12 @@
 
 This is a frontend app, part of [Example Voting App](https://github.com/dockersamples/example-voting-app.git).  
 
-## Tasks to Run
+### Technology Stack 
+Following technology stack is being used to develop and run the application. 
+ * Python
+ * Docker Engine 
+
+## Tasks to Perform
 
 To build and run this app as a container, following steps need to be performed in a Dockerfile: 
 
