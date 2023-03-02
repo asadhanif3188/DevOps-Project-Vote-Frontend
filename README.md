@@ -25,11 +25,14 @@ A Dockerfile is created with following conetents.
 ```  
 ### Step 2: Build Image
 To execute the application, an image is built from Dockerfile using following command. 
+
 `docker build -t asadhanif/vote:v1 .` 
 
 ![Build Image](./screenshorts/build-image.png)
 
 ### Step 3: Run the Container
 Run the container with following command:
+
 `docker run  -t asadhanif/vote:v1 .` 
+
 ![Run Container](./screenshorts/run-container.png)
